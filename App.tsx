@@ -5,16 +5,12 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      <Text>Project using command npx @react-native-community/cli@latest init MyAppWithoutRNW --version 0.80.0</Text>
     </View>
   );
 }
@@ -22,6 +18,9 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 20,
   },
 });
 
